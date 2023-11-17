@@ -1,0 +1,11 @@
+
+type Note = 
+ record {
+   id: nat;
+   textarea: text;
+ };
+service : {
+  addTodo: (text) -> (nat);
+  deleteTodo: (nat) -> () oneway;
+  getAllTodo: () -> (vec Note) query;
+}

@@ -1,0 +1,30 @@
+
+{
+  "canisters": {
+    "nargis_backend": {
+      "main": "src/nargis_backend/main.mo",
+      "type": "motoko"
+    },
+    "nargis_frontend": {
+      "dependencies": [
+        "nargis_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/nargis_frontend/src/index.html"
+      },
+      "source": [
+        "src/nargis_frontend/assets",
+        "dist/nargis_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
